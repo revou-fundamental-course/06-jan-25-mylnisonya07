@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <!-- css -->
+     <link rel="stylesheet" href="css\style.css" />
+  </head>
 
-<body>
-    
-</body>
+  <body>
+    <!-- Logo and Navigation -->
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-icon"></div>
+      <!-- Navigation -->
+      <nav>
+        <a href="#home-page" class="left-rounded">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#message-us" class="right-rounded">Messege Us</a>
+      </nav>
+    </header>
+    <hr /> 
+    <!-- Main Content -->
+    <main>
+        <!-- kenapa pakai section? untuk memisahkan suatu wilayah pada project ini tdiak akan pindah page jadi hanya pada scroll -->
+        <!-- Home Page -->
+        <section>
+            <header id="home-page">
+                <h1>Hi <span id="user-greeting"> User</span>, Welcome to our website </h1>
+                <p>Lorem ipsum dolar sit amet adipiscing...</p>
+            </header>
 
+            <div class="banner-image"></div>
+            
+        </section>
+        <!-- Our Profile -->
+        <section>
+            <!-- Tittle -->
+            <header id="our-profile">
+                <h1>Our Profile</h1>
+            </header>
+            <div class="content"></div>
+        </section>
+        <!-- Portofolio -->
+        <section>
+            <!-- Tittle -->
+            <header id="portofolio">
+                <h1>Portofolio</h1>
+            </header>
+            <div class="content"></div>
+        </section>
+        <!-- Message Us -->
+        <section>
+            <!-- Tittle -->
+            <header id="message-us">
+                <h1>Message Us</h1>
+            </header>
+            <div class="content"></div>
+        </section>
+    </main>
+    <hr />
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 - All Right Reserved</p>
+    </footer>
+  </body>
 </html>
