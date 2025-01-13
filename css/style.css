@@ -45,3 +45,70 @@ nav > a {
 footer {
   text-align: center;
 }
+
+
+
+/* css messages us section */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+input[type="submit"] {
+  width: 100%;
+  box-sizing: border-box; /* Untuk memastikan padding tidak melampaui lebar */
+}
+
+textarea {
+  resize: none; /* Agar textarea tidak bisa diubah ukurannya */
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-layout {
+  width: 100%;
+}
+
+.form-column {
+  width: 50%;
+  padding: 10px;
+}
+
+.output-column {
+  width: 50%;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  border: 2px solid #ccc; /* Garis kotak di sekitar kolom */
+  border-radius: 8px; /* Menambahkan sudut melengkung (opsional) */
+  margin-left: 20px; /* Memberi jarak antara kolom kiri dan kanan */
+  background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+}
+
+.output-box {
+  padding: 15px;
+  background-color: #fff; /* Warna latar belakang kotak output */
+}
+
+
