@@ -1,12 +1,12 @@
-// Fungsi greeting name
-function setUserName() {
-    const userName = prompt("Masukkan nama Anda:");
-    if (userName) {
-        document.getElementById("name").textContent = userName;
-    }
-}
+// // Fungsi greeting name
+// function setUserName() {
+//     const userName = prompt("Masukkan nama Anda:");
+//     if (userName) {
+//         document.getElementById("name").textContent = userName;
+//     }
+// }
 
-setUserName();
+// setUserName();
 
 
 
@@ -70,3 +70,50 @@ function changeBackground() {
 }
 
 setInterval(nextBanner, 3000); // 3000ms = 3s
+
+
+
+// fungsi untuk form input nama / greeting name
+function setUserName() {
+    // Membuat elemen overlay
+    const overlay = document.createElement("div");
+    overlay.id = "overlay";
+
+    // Membuat elemen popup
+    const popup = document.createElement("div");
+    popup.id = "popup";
+
+    // Menambahkan konten ke popup
+    const title = document.createElement("h2");
+    title.textContent = "Masukkan Nama Anda";
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.id = "inputName";
+    input.placeholder = "Nama Anda";
+
+    const button = document.createElement("button");
+    button.textContent = "Submit";
+    button.id = "submitButton";
+
+    // Menangani submit
+    button.addEventListener("click", () => {
+        const userName = input.value.trim();
+        if (userName) {
+            document.getElementById("name").textContent = userName; // Update nama di halaman
+            document.body.removeChild(overlay); // Hapus popup
+        } else {
+            alert("Nama tidak boleh kosong!");
+        }
+    });
+
+    // Merangkai elemen popup
+    popup.appendChild(title);
+    popup.appendChild(input);
+    popup.appendChild(button);
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay); // Menambahkan overlay ke body
+}
+
+// Menjalankan fungsi
+setUserName();
