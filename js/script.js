@@ -35,3 +35,38 @@ function validationform() {
 
     return false;
 }
+
+
+// fungsi untuk banner slide
+
+let indexBanner = 0;
+
+changeBackground();
+
+function nextBanner() {
+    indexBanner += 1; //kenapa +=1 agar gambar diperbaharii jabarannya indexBanner = indexBanner + 1
+    changeBackground();
+    
+}
+
+function changeBackground() {
+    let bannerList = document.getElementsByClassName('banner-image');
+    console.log(bannerList.length); // console nya bisa di hapus agar tdak masuk ke production kita
+
+    // reset change banner  jika melebihi jumlah gambar
+    console.log(indexBanner); // console nya bisa di hapus agar tdak masuk ke production kita
+    if (indexBanner >= bannerList.length - 1) {
+        // reset indexBanner
+        indexBanner = 0;
+    }
+
+    // looping bannerList
+    for (let i = 0; i < bannerList.length; i++) {
+        bannerList[i].style.display = "none";
+    }
+
+    bannerList[indexBanner].style.display = "block";
+
+}
+
+setInterval(nextBanner, 3000); // 3000ms = 3s

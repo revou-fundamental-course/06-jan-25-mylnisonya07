@@ -17,7 +17,7 @@ nav {
 }
 
 .left-rounded {
-    border-radius: 12px 0 0 12px;
+  border-radius: 12px 0 0 12px;
 }
 
 .right-rounded {
@@ -32,9 +32,20 @@ nav > a {
 }
 .banner-image {
   height: 450px;
-  background-image: url(https://picsum.photos/1000);
   background-size: cover;
   background-position: center;
+}
+
+.banner-image-1 {
+  background-image: url(https://picsum.photos/500);
+}
+
+.banner-image-2 {
+  background-image: url(https://picsum.photos/501);
+}
+
+.banner-image-3 {
+  background-image: url(https://picsum.photos/502);
 }
 
 .content {
@@ -45,8 +56,6 @@ nav > a {
 footer {
   text-align: center;
 }
-
-
 
 /* css messages us section */
 table {
@@ -112,3 +121,18 @@ input[type="submit"]:hover {
 }
 
 
+/* untuk responsive designnya */
+@media only screen and (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .logo-icon {
+    margin-bottom: 10px;
+  }
+}
