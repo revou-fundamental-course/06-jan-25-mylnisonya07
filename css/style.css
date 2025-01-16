@@ -30,6 +30,182 @@ nav > a {
   color: black;
   text-decoration: none;
 }
+
+/* css untuk greeting names (popup) */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+#popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  box-sizing: border-box;
+  display: grid;
+}
+
+#inputName {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#submitButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#submitButton:hover {
+  background-color: #45a049;
+}
+
+/* css untu section our profile */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.business-card {
+  width: flex;
+  background-color: #d6efff; /* Card background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0); /* Text color inside card */
+}
+
+.card-content {
+  text-align: center;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.contact {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.website {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+/* css untuk section our portofolio */
+
+.about, .vision {
+  padding: 20px;
+  margin: 10px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  height: 500px; 
+  overflow-y: auto; 
+}
+
+.portfolio-card {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.portfolio-card h3 {
+  margin: 10px 0;
+}
+
+.portfolio-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.porto-1 {
+  background-image: url(https://picsum.photos/201);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.porto-2 {
+  background-image: url(https://picsum.photos/202);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.porto-3 {
+  background-image: url(https://picsum.photos/203);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.porto-4 {
+  background-image: url(https://picsum.photos/204);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
 .banner-image {
   height: 450px;
   background-size: cover;
@@ -49,7 +225,6 @@ nav > a {
 }
 
 .content {
-  /* opsional */
   height: 500px;
 }
 
@@ -57,54 +232,6 @@ footer {
   text-align: center;
 }
 
-/* css untuk greeting names (popup) */
-/* Overlay styling */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Popup styling */
-#popup {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 300px;
-}
-
-/* Input field styling */
-#inputName {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Button styling */
-#submitButton {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#submitButton:hover {
-  background-color: #45a049;
-}
 
 
 /* css messages us section */
@@ -123,11 +250,11 @@ input[type="date"],
 textarea,
 input[type="submit"] {
   width: 100%;
-  box-sizing: border-box; /* Untuk memastikan padding tidak melampaui lebar */
+  box-sizing: border-box; 
 }
 
 textarea {
-  resize: none; /* Agar textarea tidak bisa diubah ukurannya */
+  resize: none; 
 }
 
 input[type="submit"] {
@@ -159,15 +286,15 @@ input[type="submit"]:hover {
   overflow-wrap: break-word;
   word-break: break-word;
   max-width: 100%;
-  border: 2px solid #ccc; /* Garis kotak di sekitar kolom */
-  border-radius: 8px; /* Menambahkan sudut melengkung (opsional) */
-  margin-left: 20px; /* Memberi jarak antara kolom kiri dan kanan */
-  background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+  border: 2px solid #ccc; 
+  border-radius: 8px; 
+  margin-left: 20px; 
+  background-color: #f9f9f9; 
 }
 
 .output-box {
   padding: 15px;
-  background-color: #fff; /* Warna latar belakang kotak output */
+  background-color: #fff; 
 }
 
 
@@ -194,4 +321,96 @@ input[type="submit"]:hover {
   .center-rounded {
     border-radius: 12px 12px 12px 12px;
   }
+
+  #popup {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  #inputName {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #submitButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    height: 500px;
+    overflow-y: auto; 
+  }
+  
+  .portfolio-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    display: flex;
+    flex-direction: column;
+}
+tr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+td {
+    width: 100%;
+}
+
+.form-column {
+    width: auto;
+    padding: 10px;
+    margin-left: 0;
+  
+}
+
+.output-column {
+    width: auto;
+    padding: 10px;
+    margin-left: 0;
+}
+
+.business-card {
+  width: 100%; /* Make the card width responsive */
+  padding: 15px; /* Reduce padding on smaller screens */
+}
+
+.name {
+  font-size: 20px; /* Adjust name font size for small screens */
+}
+
+.title {
+  font-size: 14px; /* Adjust title font size for small screens */
+}
+
+.contact, .website {
+  font-size: 12px; /* Adjust contact details font size */
+}
+
+
+
+
 }
